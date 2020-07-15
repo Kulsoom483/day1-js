@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day1 Assignments</title>
+    <script > </script>
+    <script src = "Day1.js" type = "text/javascript"></script>
+</head>
+<body>
+    <h1>Day1 Assignments </h1>
+
+    <p>Hello Thanks for making a videos for javascript </p>
+
+    <p><button onclick="myFunction()">Start Trace</button></p>
+    <p>Here End Q1 </p>
+    <p style="background-color: crimson;"> Q2) difference between var let and const in javascript with example </p>
+
+    <p> <h1> The Differences Between let and var </h1>
+        A var variable can be redeclared and updated. <br>
+        A let variable be be updated but not redeclared.</p>
+        <p style="background-color: coral;">
+            An example of trying to redeclare a let variable:<br>
+            // In editor:<br>
+            &lt;script<br>
+             let points = 50;<br>
+             let points = 60;<br>
+             /script&gt;<br>
+             // In the console I get an error:<br>
+Uncaught SyntaxError: Identifier 'points' has already been declared
+        </p>
+        <p style="background-color: antiquewhite;">how can i update it<br>
+            let points = 50;<br>
+            points = 60;<br>
+            // In console:<br>
+            points<br>
+            // Returns:<br>
+            60</p>
+            <P > <h2 style="background-color:burlywood">let and var can be reassigned to a new value while const cannot be reassigned.</h2></P>
+            <p style="background-color: antiquewhite;"> var a = 10;<br>
+                a = 20;<br>
+                //output: 20<br>
+                console.log(a);<br>
+                <br>
+                let b = 'hello';<br>
+                b = 'world';<br>
+                //output: 'world'<br>
+                console.log(b);<br>
+                <br>
+                const c = 'hello'<br>
+                //Error: Uncaught TypeError: Assignment to constant variable.<br>
+                c = 'world'  </p>
+
+                <p style="background-color:darkgrey">
+                    
+                    *Scope<br>
+                    var is function-scoped.<br>
+                    let and const are block-scoped(any code within {} braces).<br>
+                    Here is an article on Understanding Scope in Javascript.<br>
+                    *Hoisting<br>
+                    var is always hoisted to the top of their respective scope.<br>
+                    let and const is also hoisted but will throw an error if the variable is used before the declaration. It is a little complicated and we will discuss it in a separate article dedicated to this specific topic.
+                </p>
+
+                <h2><p style="background-color: crimson;"> Q3) write a brif into available data type in javascript </p></h2>
+                <div style="background-color: darkgray;"> 
+                    <h3>The String Data Type</h3><br>
+                    example<br>
+                    var a = 'Hi there!';  // using single quotes<br>
+                var b = "Hi there!";  // using double quotes <br>
+                <h3>The Number Data Type</h3><br>
+                var a = 25;         // integer<br>
+var b = 80.5;       // floating-point number<br>
+var c = 4.25e+6;    // exponential notation, same as 4.25e6 or 4250000<br>
+var d = 4.25e-6;    // exponential notation, same as 0.00000425<br>
+alert(16 / 0);  // Output: Infinity<br>
+alert(-16 / 0); // Output: -Infinity<br>
+alert(16 / -0); // Output: -Infinity<br>
+alert("Some text" / 2);       // Output: NaN<br>
+alert("Some text" / 2 + 10);  // Output: NaN<br>
+alert(Math.sqrt(-1));         // Output: NaN<br>
+<h3>The Boolean Data Type</h3><br>
+var isReading = true;   // yes, I'm reading<br>
+var isSleeping = false; // no, I'm not sleeping<br>
+var a = 2, b = 5, c = 10;<br>
+<br>
+alert(b > a) // Output: true<br>
+alert(b > c) // Output: false<br>
+<h3>The Boolean Data Type</h3><br>
+var a;<br>
+var b = "Hello World!"<br>
+ 
+alert(a) // Output: undefined<br>
+alert(b) // Output: Hello World!<br>
+<h3>The Null Data Type</h3><br>
+var a = null;<br>
+alert(a); // Output: null<br>
+<br>
+var b = "Hello World!"<br>
+alert(b); // Output: Hello World!<br>
+<br>
+b = null;<br>
+alert(b) // Output: null<br>
+<h3>The Object Data Type</h3><br>
+var emptyObject = {};<br>
+var person = {"name": "Clark", "surname": "Kent", "age": "36"};<br>
+ 
+// For better reading<br>
+var car = {<br>
+    "modal": "BMW X3",<br>
+    "color": "white",<br>
+    "doors": 5<br>
+}<br>
+<h3>The Array Data Type</h3><br>
+var colors = ["Red", "Yellow", "Green", "Orange"];<br>
+var cities = ["London", "Paris", "New York"];<br>
+<br>
+alert(colors[0]);   // Output: Red<br>
+alert(cities[2]);   // Output: New York<br>
+
+<h3>The Function Data Type</h3><br>
+var greeting = function(){ <br>
+    return "Hello World!"; <br>
+}<br>
+ 
+// Check the type of greeting variable<br>
+alert(typeof greeting) // Output: function<br>
+alert(greeting());     // Output: Hello World!<br>
+
+function createGreeting(name){<br>
+    return "Hello, " + name;<br>
+}<br>
+function displayGreeting(greetingFunction, userName){<br>
+    return greetingFunction(userName);<br>
+}<br>
+<br>
+var result = displayGreeting(createGreeting, "Peter");<br>
+alert(result); // Output: Hello, Peter<br>
+
+<h3>The typeof Operator</h3><br>
+
+// Numbers<br>
+typeof 15;  // Returns: "number"<br>
+typeof 42.7;  // Returns: "number"<br>
+typeof 2.5e-4;  // Returns: "number"<br>
+typeof Infinity;  // Returns: "number"<br>
+typeof NaN;  // Returns: "number". Despite being "Not-A-Number"<br>
+<br>
+// Strings<br>
+typeof '';  // Returns: "string"<br>
+typeof 'hello';  // Returns: "string"<br>
+typeof '12';  // Returns: "string". Number within quotes is typeof string<br>
+<br>
+// Booleans<br>
+typeof true;  // Returns: "boolean"<br>
+typeof false;  // Returns: "boolean"<br>
+ 
+// Undefined<br>
+typeof undefined;  // Returns: "undefined"<br>
+typeof undeclaredVariable; // Returns: "undefined"<br>
+<br>
+// Null<br>
+typeof Null;  // Returns: "object"<br>
+<br>
+// Objects<br>
+typeof {name: "John", age: 18};  // Returns: "object"<br>
+<br>
+// Arrays<br>
+typeof [1, 2, 4];  // Returns: "object"<br>
+<br>
+// Functions<br>
+typeof function(){};  // Returns: "function"<br>
+
+</div>
+
+</body>
+</html>
